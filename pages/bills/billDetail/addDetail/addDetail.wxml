@@ -1,0 +1,36 @@
+<!--pages/bills/billDetail/addDetail/addDetail.wxml-->
+<view class="wrap">
+  <view class="sex">
+    类型：
+    <radio-group class="radio-group" bindchange="radioChange">
+      <radio value="0" checked="true" />支出
+      <radio class="zc" value="1" />收入
+    </radio-group>
+  </view>
+  <view class="typeName">
+    <view class="nameView">
+      类型名称：
+    </view>
+    <picker class="typePicker" range="{{typeNameList}}" range-key="type_name" bindchange="selectType">
+      <view class="picker" wx:if="{{typeName=='请选择类型名称'}}">
+        {{typeName}}
+      </view>
+      <view class="pickerSelect" wx:else="{{typeName=='请选择类型名称'}}">
+        {{typeName}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="price">
+    账单价格：
+    <input class="billPrice" bindinput="billPrice" placeholder="请输入账单价格"></input>
+  </view>
+
+  <view class="price">
+    账单备注：
+    <input class="remarks" bindinput="remarks" placeholder="请输入账单备注"></input>
+  </view>
+  <view class="buttom">
+    <view class="sure" bindtap="sure">确定</view>
+  </view>
+</view>

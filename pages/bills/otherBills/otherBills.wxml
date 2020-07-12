@@ -1,0 +1,62 @@
+<view class="wrap">
+  <view class="add" bindtap="goAddBill">
+    <image src="http://wechat.espot.com.cn/gais/webResource1/staticResource/new/green-add.png?pfdrid_c=true" class="addImg"></image>
+  </view>
+  <block wx:for="{{allBillsData}}" wx:key="index">
+    <view class="allBillsOver" wx:if="{{item.add}}" bindtap="goDetail" data-item="{{item}}">
+      <view class="billsLegt">
+
+        <view class="leftOne">
+          <view class="billName">{{item.bill_name}}</view>
+          <view class="shu">|</view>
+          <view class="billMark">{{item.billMark}}</view>
+        </view>
+
+        <view class="leftTwo">
+          <view>
+            <image mode="aspectFit" class="image" src="/images/people-20200225.png"></image>
+          </view>
+          <view class="billUserName">{{item.user_name}}</view>
+
+        </view>
+
+        <view class="leftThree">
+          <view>
+            <image mode="aspectFit" class="image" src="/images/time-20200225.png"></image>
+          </view>
+          <view class="billDate">{{item.bill_date}}</view>
+        </view>
+
+      </view>
+      <view class="billsRight">已结算</view>
+    </view>
+
+    <view class="allBills" wx:else="{{item.add}}" bindtap="goDetail" data-item="{{item}}">
+      <view class="billsLegt">
+
+        <view class="leftOne">
+          <view class="billName">{{item.bill_name}}</view>
+          <view class="shu">|</view>
+          <view class="billMark">{{item.billMark}}</view>
+        </view>
+
+        <view class="leftTwo">
+          <view>
+            <image mode="aspectFit" class="image" src="/images/people-20200225.png"></image>
+          </view>
+          <view class="billUserName">{{item.user_name}}</view>
+
+        </view>
+
+        <view class="leftThree">
+          <view>
+            <image mode="aspectFit" class="image" src="/images/time-20200225.png"></image>
+          </view>
+          <view class="billDate">{{item.bill_date}}</view>
+        </view>
+
+      </view>
+
+    </view>
+  </block>
+</view>

@@ -1,0 +1,13 @@
+<!--pages/bills/billUser/billUser.wxml-->
+<view class="wrap">
+  <block wx:for="{{addBill}}" wx:key="index">
+    <view class="allPeople">
+      <view>{{item.bill_name}}</view>
+      <view class="addDate">{{item.buser_time}}邀请加入</view>
+      <view class="peoMark" data-item="{{item}}" bindtap="sure">同意</view>
+      <view catchtap="delete" class="div_right" data-item="{{item}}">
+        拒绝
+      </view>
+    </view>
+  </block>
+</view>

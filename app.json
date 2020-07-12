@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/bills/addBill/addBill",
+    "pages/mine/mine",
+    "pages/logs/logs",
+    "pages/bills/myBills/mtBills",
+    "pages/bills/otherBills/otherBills",
+    "pages/bills/closeBills/closeBills",
+    "pages/mine/updateMine/updateMine",
+    "pages/mine/updatePassword/updatePassword",
+    "pages/bills/billDetail/billDetail",
+    "pages/bills/addBillDetail/addBillDetail",
+    "pages/bills/billUser/billUser",
+    "pages/bills/billDetail/addDetail/addDetail",
+    "pages/mine/datas/datas"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "多人记账",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "position": "bottom",
+    "color": "#888888",
+    "selectedColor": "#00923f",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/lv_you.png",
+        "selectedIconPath": "images/lv_you_lv.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/wo_de.png",
+        "selectedIconPath": "images/wo_de_lv.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

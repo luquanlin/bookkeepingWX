@@ -1,0 +1,23 @@
+<view class="wrap">
+  <!-- <view class="addPeople">
+    <input placeholder="请输入邀请的账号" class="addInput"></input>
+     <image src="https://wechat.espot.com.cn/gais/webResource1/staticResource/new/addfriends.png?pfdrid_c=true" mode="aspectFit" class="addPeoImg"></image> 
+    <view class="addName">邀请</view>
+  </view> -->
+  <view class="billNmae">账单名称：
+    <input class="billNameInput" bindinput="biiName" placeholder="请输入账单的名称"></input>
+  </view>
+
+  <!-- <view class="blankMiddle"></view>
+
+  <block wx:for="{{4}}" wx:key="index">
+    <view class="allPeople">
+      <view>卢泉林（169002006）</view>
+      <view class="addDate">2020-02-26 22:53:00邀请加入</view>
+      <view class="peoMark">待接受</view>
+
+    </view>
+  </block> -->
+
+  <view class="sureButton" bindtap="save">保存</view>
+</view>

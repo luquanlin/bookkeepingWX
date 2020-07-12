@@ -1,0 +1,115 @@
+page {
+  background: #f4f4f4;
+  width: 100%;
+  height: 100vh;
+}
+
+.add {
+  width: 110rpx;
+  height: 110rpx;
+  background: #fff;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  border-radius: 50%;
+  background: #e0e0e0;
+  z-index: 999;
+}
+
+.addImg {
+  width: 56rpx;
+  height: 56rpx;
+  position: absolute;
+  top: 25%;
+  right: 22%;
+}
+
+.allBills {
+  position: relative;
+  display: flex;
+  width: 90%;
+  height: 230rpx;
+  background: #fff;
+  /* padding: 0 20rpx; */
+  margin-top: 40rpx;
+  margin-left: 5%;
+  box-shadow: 6rpx 10rpx 10rpx #888;
+}
+
+.allBillsOver {
+  position: relative;
+  display: flex;
+  width: 90%;
+  height: 230rpx;
+  background: #aaa;
+  /* padding: 0 20rpx; */
+  margin-top: 40rpx;
+  margin-left: 5%;
+  box-shadow: 6rpx 10rpx 10rpx #888;
+}
+
+.billsLegt {
+  /* width: 80%;
+  height: 100%; */
+  padding: 20rpx 0 0 20rpx;
+}
+
+.billsRight {
+  writing-mode: tb-rl;
+  position: absolute;
+  right: 3%;
+  top: 26%;
+  color: #666;
+}
+
+.billAllPeople {
+  position: absolute;
+  right: 4%;
+  bottom: 9%;
+  color: red;
+  font-weight: bold;
+  font-size: 34rpx;
+}
+
+image {
+  height: 20rpx;
+  width: 20rpx;
+}
+
+.leftOne {
+  display: flex;
+}
+
+.billName {
+  font-weight: bold;
+  font-size: 32rpx;
+  margin-right: 20rpx;
+}
+
+.billMark {
+  margin-left: 20rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.leftTwo {
+  display: flex;
+  margin-top: 20rpx;
+}
+
+.billUserName {
+  margin-left: 20rpx;
+  /* position: absolute; */
+  font-size: 32rpx;
+  color: #333;
+}
+
+.billDate {
+  margin-left: 20rpx;
+  color: #333;
+}
+
+.leftThree {
+  display: flex;
+  margin-top: 20rpx;
+}

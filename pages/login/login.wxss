@@ -1,0 +1,137 @@
+.wrap {
+  background: #f4f4f4;
+  height: 100vh;
+  position: relative;
+}
+
+.loginRegister {
+  width: 550rpx;
+  height: 990rpx;
+  background-size: cover;
+  position: absolute;
+  top: 7%;
+  left: 14%;
+  opacity: 0.5;
+  box-shadow: 10rpx 10rpx 5rpx #888;
+}
+
+.login {
+  position: absolute;
+  top: 24%;
+  left: 24%;
+}
+
+.loginAccount {
+  font-weight: bold;
+  display: flex;
+}
+
+.loginPassword {
+  font-weight: bold;
+  display: flex;
+  margin-top: 180rpx;
+}
+
+.loginInput {
+  border-bottom: 1rpx solid #888;
+  width: 310rpx;
+}
+
+.sureInput {
+  border-bottom: 1rpx solid #888;
+  width: 256rpx;
+}
+
+.loginButton {
+  width: 170rpx;
+  height: 70rpx;
+  background: rgba(51, 204, 118, 1);
+  border-radius: 24rpx;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 130rpx;
+  margin-left: 104rpx;
+  font-weight: bold;
+  font-size: 36rpx;
+}
+
+.goRegister {
+  position: absolute;
+  bottom: -60%;
+  right: -9%;
+  color: #666;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* 注册 */
+
+.register {
+  position: absolute;
+  top: 16%;
+  left: 24%;
+}
+
+.registerName {
+  font-weight: bold;
+  display: flex;
+}
+
+.registerAccount {
+  font-weight: bold;
+  display: flex;
+  margin-top: 50rpx;
+}
+
+.registerPassword {
+  font-weight: bold;
+  display: flex;
+  margin-top: 50rpx;
+}
+
+.registerSurePassword {
+  font-weight: bold;
+  display: flex;
+  margin-top: 50rpx;
+}
+
+/* .loginInput {
+  border-bottom: 0.5px solid #888;
+  width: 310rpx;
+} */
+
+.registerButton {
+  width: 170rpx;
+  height: 70rpx;
+  background: rgba(51, 204, 118, 1);
+  border-radius: 24rpx;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 130rpx;
+  margin-left: 104rpx;
+  font-weight: bold;
+  font-size: 36rpx;
+}
+
+.goLogin {
+  position: absolute;
+  bottom: -36%;
+  right: -8%;
+  color: #666;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.sex {
+  display: flex;
+  font-weight: bold;
+  margin-top: 50rpx;
+}
+
+.radio {
+  margin-left: 20rpx;
+}

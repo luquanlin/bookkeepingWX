@@ -1,0 +1,48 @@
+<!--pages/mine/mine.wxml-->
+<view>
+  <view class='my-head' wx:if="{{serverUser}}">
+    <view class="mask" wx:if="{{serverUser.bgImgs}}" style="background-image: url({{serverUser.bgImgs}})"></view>
+    <!-- <view class="mask" wx:else="{{serverUser.bgImgs}}" style="background-image: url(http://wechat.espot.com.cn/gais/webResource1/staticResource/new/mine_defaultBg.png?pfdrid_c=true)">
+    </view> -->
+    <view class='top'>
+      <image class='userImage' bindtap="himgs" data-himg="{{serverUser.avatarUrl}}" src='{{serverUser.avatarUrl}}' mode='aspectFill'></image>
+      <view class='userName'>
+        <view class="nameTop">{{serverUser.nickName}}</view>
+        <!-- <view class="nameBottom">ID:123456789</view> -->
+      </view>
+     
+      <!-- 个人主页 -->
+      <view class="myHome" bind:tap='goToUserInfo'>
+        <view class="left">个人主页</view>
+        <image class="right" src='http://wechat.espot.com.cn/gais/webResource1/staticResource/new/xiangyoujiantou.png?pfdrid_c=true' mode='aspectFill'></image>
+      </view>
+
+    </view>
+  </view>
+
+  <block wx:else="{{serverUser.weChatAvatarUrl}}">
+    <view class='myHeadLogin'>
+      <image class='headImage' src='http://wechat.espot.com.cn/gais/webResource1/staticResource/new/myHead.png?pfdrid_c=true' />
+      <button class='buttonStyle' open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">
+        <text>点击登录</text>
+      </button>
+    </view>
+  </block>
+  <!-- 分割线 -->
+  <!--高度不够 X2应该够了 -->
+  <view class="middleBlank"></view>
+  <view class="middleBlank"></view>
+  <!-- 我的页面的功能 -->
+  <block wx:for="{{feature}}" wx:key="index">
+    <!-- 分割线 -->
+    <view class="middleBlank" wx:if="{{index==3}}"></view>
+    <view class='temp borderBottom' bindtap="goPage" data-pagename="{{item.middleName}}">
+      <view class="left">
+        <image class="leftImage" src="{{item.leftImage}}" mode='aspectFill'></image>
+        <view class="text">{{item.middleName}}</view>
+      </view>
+      <image class="right" src='http://wechat.espot.com.cn/gais/webResource1/staticResource/new/xiangyoujiantou.png?pfdrid_c=true' mode='aspectFill'></image>
+    </view>
+  </block>
+
+</view>

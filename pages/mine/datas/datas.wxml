@@ -1,0 +1,11 @@
+<!--pages/mine/datas/datas.wxml-->
+<view class="mychart">
+  <view class="tabNav">
+    <view data-index="0" bindtap="tabSelect" class="{{tabIndex==0?'tabColor':''}}">全部</view>
+    <view data-index="1" bindtap="tabSelect" class="{{tabIndex==1?'tabColor':''}}">支出</view>
+    <view data-index="2" bindtap="tabSelect" class="{{tabIndex==2?'tabColor':''}}">收入</view>
+  </view>
+  <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ec}}" wx:if="{{tabIndex==0}}"></ec-canvas>
+  <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ecZero}}" wx:if="{{tabIndex==1}}"></ec-canvas>
+  <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ecOne}}" wx:if="{{tabIndex==2}}"></ec-canvas>
+</view>

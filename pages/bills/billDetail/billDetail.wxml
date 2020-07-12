@@ -1,0 +1,64 @@
+<view class="mask" wx:if="{{maskFlag}}" bindtap="mask"></view>
+<view class="wrap">
+  <view class="billNmae">账单名称：
+    <view class="nameXS">{{billDetailData[0].bill_name}}</view>
+    <image src="https://wechat.espot.com.cn/gais/webResource1/staticResource/new/addfriends.png?pfdrid_c=true" mode='aspectFill' class="topAddImg" bindtap="goPeople"></image>
+  </view>
+
+  <view class="blankMiddle"></view>
+
+  <block wx:for="{{billDetailData}}" wx:key="index">
+    <view class="allPeople">
+      <view class="topOne">
+        <view>{{item.bdetail_remarks}}</view>
+        <view class="money">
+          <view wx:if="{{item.type_mark=='1'}}">+</view>
+          <view wx:if="{{item.type_mark=='0'}}">-</view>
+          <view>{{item.bdetail_money}}</view>
+        </view>
+
+      </view>
+      <view class="typeMark">{{item.type_name}}（{{item.user_name}}）</view>
+      <view class="addDate">{{item.bdetail_date}}</view>
+      <!-- <view class="peoMark">待接受</view> -->
+      <view catchtap="delete" class="div_right" data-item="{{item}}" wx:if="{{(item.uuid==userId)||found}}">
+        <image class="delete" src="https://wechat.espot.com.cn/gais/webResource1/staticResource/new/1/%E5%88%A0%E9%99%A4.png?pfdrid_c=true" role="img">
+        </image>
+      </view>
+    </view>
+
+
+  </block>
+
+  <view class="sureButton" wx:if="{{bill_add=='0'&&!found}}" bindtap="addDetail">添加账单数据</view>
+  <view class="sureTwoButton" wx:if="{{bill_add=='0'&&found}}">
+    <view class="addBillDetail" bindtap="addDetail">添加账单数据</view>
+    <view class="closeBill" bindtap="closeBill">结算账单</view>
+  </view>
+  <view wx:if="{{bill_add=='1'}}">
+    <view class="sureButton" bindtap="selectOneDetail">查看结账详细</view>
+  </view>
+
+
+
+  <view class="detailOne" wx:if="{{maskFlag}}">
+    <view class="detail">
+      <view class="display">
+        <view class="addNames">账单总收入：</view>
+        <view class="doller">2元</view>
+      </view>
+      <view class="display">
+        <view class="addNames">账单总支出：</view>
+        <view class="doller">-26元</view>
+      </view>
+      <view class="display">
+        <view class="addNames">账单共计：</view>
+        <view class="doller">-24元</view>
+      </view>
+      <view class="display">
+        <view class="addNames">平均账单金额：</view>
+        <view class="doller">-12元</view>
+      </view>
+    </view>
+  </view>
+</view>

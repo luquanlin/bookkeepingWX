@@ -1,0 +1,40 @@
+<view class="wrap">
+  <image class="loginRegister" src='/images/login-20200224.jpg'>
+  </image>
+  <view class="login" wx:if="{{loginFlag}}">
+    <view class="loginAccount">账 号：
+      <input class="loginInput" bindinput="account" placeholder="请输入账号"></input>
+    </view>
+    <view class="loginPassword">密 码：
+      <input type="password" class="loginInput" bindinput="password" placeholder="请输入密码"></input>
+    </view>
+    <view class="loginButton" catchtap="login">登 陆</view>
+    <view class="goRegister" bindtap="goRegister">点击注册 ></view>
+  </view>
+
+  <view class="register" wx:else="{{loginFlag}}">
+    <view class="registerName">昵 称：
+      <input class="loginInput" bindinput="reName" placeholder="请输入昵称"></input>
+    </view>
+    <view class="registerAccount">账 号：
+      <input class="loginInput" bindinput="reAcoount" placeholder="请输入账号"></input>
+    </view>
+    <view class="registerPassword">密 码：
+      <input type="password" class="loginInput" bindinput="rePassword" placeholder="请输入密码"></input>
+    </view>
+    <view class="registerSurePassword">确认密码：
+      <input type="password" class="sureInput" bindinput="reSurePas" placeholder="请再次输入密码"></input>
+    </view>
+    <view class="sex">
+      性 别：
+      <radio-group class="radio-group" bindchange="reSex">
+        <radio class="radio" wx:for-items="{{sex}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+          <text>{{item.value}}</text>
+        </radio>
+      </radio-group>
+    </view>
+    <view class="registerButton" catchtap="register">注 册</view>
+    <view class="goLogin" bindtap="goRegister">已有帐号点击登陆 ></view>
+  </view>
+
+</view>

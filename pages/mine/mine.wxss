@@ -1,0 +1,224 @@
+/* pages/mine/mine.wxss */
+
+/* 头部登陆 */
+
+.myHeadLogin {
+  box-sizing: border-box;
+  width: 750rpx;
+  height: 191rpx;
+  padding: 30rpx 30rpx 22rpx 30rpx;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+.headImage {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+}
+
+.buttonStyle {
+  width: 200rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: static;
+  background-color: white;
+  margin: 0;
+  font-size: 30rpx;
+  font-family: PingFang SC Medium;
+  font-weight: Medium;
+}
+
+.middleBlank {
+  width: 100%;
+  height: 20rpx;
+  background: #f4f4f4;
+}
+
+/* 登陆成功后 */
+
+.my-head {
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 191rpx;
+}
+
+.my-head .mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-size: cover;
+}
+
+.my-head .mask::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5));
+  z-index: 0;
+}
+
+.my-head .top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 191rpx;
+  /* padding: 30rpx 30rpx 22rpx 30rpx; */
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  z-index: 999;
+}
+
+.my-head .bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 88rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 70rpx;
+  z-index: 999;
+  background-size: 100% 100%;
+}
+
+.my-head .bottom .all {
+  font-size: 32rpx;
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.my-head .bottom .num {
+  margin-left: 19rpx;
+}
+
+.top .userImage {
+  position: absolute;
+  top: 31rpx;
+  left: 30rpx;
+  max-width: 130rpx;
+  max-height: 130rpx;
+  border-radius: 50%;
+}
+
+.top .userName {
+  position: absolute;
+  top: 60rpx;
+  left: 190rpx;
+  width: 260rpx;
+  margin-left: 29rpx;
+}
+
+.userName .nameTop {
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+  font-family: PingFang SC Bold;
+  color: #333333;
+  
+}
+
+.userName .nameBottom {
+  font-size: 26rpx;
+  font-family: PingFang SC Medium;
+}
+
+.top .myHome {
+  width: 170rpx;
+  height: 120rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+right: 10%;
+top: 14%;
+
+}
+
+.myHome .left {
+  font-size: 31rpx;
+  color: #000;
+
+}
+
+.myHome .right {
+  width: 16rpx;
+  height: 28rpx;
+  margin-left: 20rpx;
+}
+
+/* 页面功能 */
+
+.temp {
+  width: 750rpx;
+  height: 98rpx;
+  background-color: white;
+  padding: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.borderTop {
+  border-top: 1rpx solid #f4f4f4;
+}
+
+.borderBottom {
+  border-bottom: 1rpx solid #f4f4f4;
+}
+
+.left {
+  display: flex;
+}
+
+.leftImage {
+  width: 38rpx;
+  height: 38rpx;
+  margin-right: 29rpx;
+  background-size: 100% 100%;
+}
+
+.text {
+  font-size: 32rpx;
+  color: #333;
+  align-self: flex-start;
+}
+
+.right {
+  width: 16rpx;
+  height: 28rpx;
+}
+.cbtn{
+  border-bottom: 1rpx solid #f4f4f4;
+  width: 100%;
+  height: 98rpx;
+  background-color:white;
+  padding: 30rpx;
+  font-size: 31rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+button::after {
+  border: none
+}
+.plain {
+  border: none;
+  border-color: transparent;
+}

@@ -1,0 +1,31 @@
+<view class="wrap">
+  <view class="addPeople">
+    <input bindinput="accountInp" placeholder="请输入邀请的账号" class="addInput"></input>
+    <!-- <image src="https://wechat.espot.com.cn/gais/webResource1/staticResource/new/addfriends.png?pfdrid_c=true" mode="aspectFit" class="addPeoImg"></image> -->
+    <view class="addName" bindtap="save">邀请</view>
+  </view>
+  <!-- <view class="billNmae">账单名称：
+    <input class="billNameInput" placeholder="请输入账单的名称"></input>
+  </view> -->
+
+  <view class="blankMiddle"></view>
+
+  <block wx:for="{{selectBillPeopleData}}" wx:key="index">
+    <view class="allPeople">
+      <view>{{item.user_name}}（{{item.user_account}}）</view>
+      <view class="addDate">{{item.buser_time}}邀请加入</view>
+      <view class="peoMark" wx:if="{{item.buser_if =='0'}}">待接受</view>
+      <view class="peoMark" wx:if="{{item.buser_if =='1'}}">已进入</view>
+      <view class="peoMark" wx:if="{{item.buser_if =='2'}}">已拒绝</view>
+      <view catchtap="delete" class="div_right" data-item="{{item}}" wx:if="{{(item.user_id==userId)||found}}">
+        <image class="delete" src="https://wechat.espot.com.cn/gais/webResource1/staticResource/new/1/%E5%88%A0%E9%99%A4.png?pfdrid_c=true" role="img">
+        </image>
+      </view>
+
+
+
+    </view>
+  </block>
+
+  <!-- <view class="sureButton">保存</view> -->
+</view>
